@@ -87,7 +87,7 @@ def load(df, db_file=DATABASE_FILE, table_name='spotify_recent_tracks'):
         # Create new table if not exist
         sql_query = f'''
             CREATE TABLE IF NOT EXISTS {table_name} (
-                ID TEXT PRIMARY KEY,
+                ID INTEGER PRIMARY KEY,
                 date TEXT NOT NULL,
                 song_name TEXT NOT NULL,
                 artist_name TEXT NOT NULL,
